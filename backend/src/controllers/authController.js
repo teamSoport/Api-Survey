@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 
 const login = async (req, res) => {
     const { email, password } = req.body;
-
+    res.send('Login successful');
     // Example logic for login
     // Replace with actual database queries
     if (email === 'test@example.com' && password === 'password') {
@@ -16,7 +16,7 @@ const login = async (req, res) => {
 
 const register = async (req, res) => {
     const { email, password } = req.body;
-
+    res.send('Register successful');
     // Example logic for registration
     // Replace with actual database queries
     const hashedPassword = await bcrypt.hash(password, 10);
